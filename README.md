@@ -3,7 +3,7 @@
 ### Install
 
 ```bash
-  rvm install 2.4.0 #if necessary
+  rvm install 2.4.1 #if necessary
   # install Redis if you haven't it
   
   git clone git@github.com:lxkuz/web-page-indexer.git
@@ -27,7 +27,7 @@
 * `GET '/swagger'` - open swagger UI with swagger.yml config [Link](https://web-page-indexer.herokuapp.com/swagger)
 
 ### Technologies
-* `Rails 5`, `Ruby 2.4.0`
+* `Rails 5`, `Ruby 2.4.1`
 * `Rubocop` with pre-commit hook used
 * swagger.yml for API reference and testing
 * `Rspec` testing engine with models, controllers and integration tests
