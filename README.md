@@ -1,23 +1,41 @@
 # README
 
-API endpoints:
+### Install
 
-* POST '/' - create new page
+```bash
+  rvm install 2.4.0 #if necessary
+  # install Redis if you haven't it
+  
+  git clone git@github.com:lxkuz/web-page-indexer.git
+  cd web-page-indexer
+  bundle
+  cp config/database.yml.sample config/database.yml
+  # change DB settings if necessary
+  rake db:create
+  rake db:migrate
+  rails s
+```  
 
-* GET '/' - list pages
+### API endpoints
 
-* GET '/swagger_editor' - open swagger editor with swagger.yml config
+* `POST '/'` - create new page, params:  url  (could be passed both with and without `http(s)://`)
 
-* GET '/swagger' - open swagger UI with swagger.yml config
+* `GET '/'` - list pages, params: page (pagination by last 10 created pages, the first page renders by default)
+
+* `GET '/swagger_editor'` - open swagger editor with swagger.yml config
+
+* `GET '/swagger'` - open swagger UI with swagger.yml config
 
 ### Technologies
-* Rubocop with pre-commit hook used
+* `Rails 5`, `Ruby 2.4.0`
+* `Rubocop` with pre-commit hook used
 * swagger.yml for API reference and testing
-* Rspec testing engine with models, controllers and integration tests
-* SimpleCov to calculate tests coverage, current tests coverage is 100.0% covered at 1.79 hits/line
-* Nokogiri to search HTML tags
-* Sidekiq with Redis for background indexing job
+* `Rspec` testing engine with models, controllers and integration tests
+* `SimpleCov` to calculate tests coverage, current tests coverage is 100.0% covered at 1.79 hits/line
+* `Nokogiri` to search HTML tags
+* `Sidekiq` with `Redis` for background indexing job
 
 ### Deploy
-* Project already have deployed on Heroku (with PostgreSQL and Redis addons)
+
+* Project already have deployed on `Heroku` (with `PostgreSQL` and `Redis` addons) [Swagger UI](https://web-page-indexer.herokuapp.com/swagger)
 * Connected with my Github account, so it will be updated for each push to master branch
