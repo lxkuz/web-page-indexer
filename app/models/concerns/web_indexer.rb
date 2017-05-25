@@ -26,7 +26,10 @@ module WebIndexer
     validates :content_status, inclusion: CONTENT_STATUSES
 
     def schedule_fetching
-      IndexWebPageJob.perform_later id
+      # unfortunately on Heroku I cant get 2 dynos on free plan
+      # this code should looks like this:
+      # IndexWebPageJob.perform_later id
+      IndexWebPageJob.perform_now id
     end
 
     def fetch_content!
