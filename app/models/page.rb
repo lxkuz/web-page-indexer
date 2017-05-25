@@ -5,7 +5,7 @@ class Page < ApplicationRecord
   include WebIndexer
 
   def url=(url)
-    write_attribute(:url, polish_url(url))
+    write_attribute(:url, polish_url(url)) if url
   end
 
   private

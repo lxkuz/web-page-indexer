@@ -1,4 +1,6 @@
 # frozen_string_literal: true
 class ErrorSerializer < ActiveModel::Serializer
-  attributes :id
+  attribute :errors do
+    object.errors.messages
+  end
 end

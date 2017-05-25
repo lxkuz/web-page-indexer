@@ -22,3 +22,6 @@
 
 #config files
 /config/database.yml
+
+# SimpleCov
+coverage
