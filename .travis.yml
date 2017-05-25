@@ -1,7 +1,8 @@
 language: ruby
 rvm:
   - 2.4.1
-
+services:
+  - postgresql
 addons:
   postgres: "9.4"
 
