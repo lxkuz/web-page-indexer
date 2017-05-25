@@ -31,7 +31,7 @@
 * `Rubocop` with pre-commit hook used
 * swagger.yml for API reference and testing
 * `Rspec` testing engine with models, controllers and integration tests
-* `SimpleCov` to calculate tests coverage, current tests coverage is 100.0% covered at 1.79 hits/line
+* `SimpleCov` to calculate tests coverage, current tests coverage is 100.0% covered at 1.58 hits/line
 * `Nokogiri` to search HTML tags
 * `Sidekiq` with `Redis` for background indexing job
 
