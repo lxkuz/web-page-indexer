@@ -9,9 +9,7 @@ module WebIndexer
     before_save :fetch_content
     cattr_accessor :__watch_tags
 
-    def self.fetch_tags(tags)
-      self.__watch_tags = tags
-    end
+    WATCH_TAGS = [:h1, :h2, :h3, :a].freeze
 
     private
 
@@ -19,7 +17,7 @@ module WebIndexer
       html_string = Faraday.get(url).body
       doc = Nokogiri::HTML html_string
       res = {}
-      self.class.__watch_tags.each do |tag_name|
+      WATCH_TAGS.each do |tag_name|
         res[tag_name] = doc.xpath("//#{tag_name}").map(&:content)
       end
       self.content = res

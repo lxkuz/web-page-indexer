@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   def create
     record = Page.new resource_params
     if record.save
-      render json: record.to_json
+      render json: record
     else
       render json: serialize_errors(record).to_json, status: 406
     end

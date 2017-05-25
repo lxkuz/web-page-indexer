@@ -2,16 +2,7 @@
 class Page < ApplicationRecord
   validates :url, presence: true
 
-  WATCH_TAGS = [:h1, :h2, :h3, :a].freeze
-
   include WebIndexer
-  fetch_tags WATCH_TAGS
-
-  WATCH_TAGS.each do |tag|
-    define_method "#{tag}_tags" do
-      content && content[tag.to_s]
-    end
-  end
 
   def url=(url)
     write_attribute(:url, polish_url(url))

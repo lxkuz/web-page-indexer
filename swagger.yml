@@ -1,0 +1,33 @@
+swagger: '2.0'
+info:
+  title: Web page indexer API
+  description: Web page indexer API
+  version: "3.0.0"
+host: localhost:3000
+schemes:
+  - http
+produces:
+  - application/json
+paths:
+  /:
+    get:
+      tags:
+        - Pages
+      summary: Get indexed pages
+      responses: 
+        200:
+          description: Return indexed pages
+    post:
+      tags:
+        - Pages
+      summary: Create page
+      parameters:
+        - name: url
+          in: query
+          type: string
+          required: true
+          description: "Your page URL"
+      responses: 
+        200:
+          description: Page created
+  

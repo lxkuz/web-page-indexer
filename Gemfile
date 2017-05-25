@@ -5,13 +5,13 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
 end
-
 gem 'active_model_serializers'
 gem 'faraday'
 gem 'nokogiri'
 gem 'overcommit'
 gem 'pg'
 gem 'puma', '~> 3.0'
+gem 'rack-cors', require: 'rack/cors'
 gem 'rails', '~> 5.0.2'
 gem 'rubocop', require: false
 
