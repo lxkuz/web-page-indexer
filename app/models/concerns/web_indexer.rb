@@ -23,7 +23,7 @@ module WebIndexer
         res[tag_name] = doc.xpath("//#{tag_name}").map(&:content)
       end
       self.content = res
-    rescue Exception => e
+    rescue => e
       self.content = { error: e.to_s }
     end
   end

@@ -13,8 +13,6 @@ class Page < ApplicationRecord
     end
   end
 
-  public
-
   def url=(url)
     write_attribute(:url, polish_url(url))
   end

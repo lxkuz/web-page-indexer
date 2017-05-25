@@ -1,10 +1,7 @@
-Style/FileName:
-  Exclude:
-    - 'Gemfile'
-
 AllCops:
   TargetRubyVersion: 2.4
   Include:
+    - Gemfile
     - Rakefile
     - config.ru
     - lib/**/*.rake

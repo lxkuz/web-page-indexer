@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
@@ -8,6 +9,7 @@ end
 gem 'active_model_serializers'
 gem 'faraday'
 gem 'nokogiri'
+gem 'overcommit'
 gem 'pg'
 gem 'puma', '~> 3.0'
 gem 'rails', '~> 5.0.2'
