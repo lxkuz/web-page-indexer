@@ -14,6 +14,7 @@ gem 'puma', '~> 3.0'
 gem 'rack-cors', require: 'rack/cors'
 gem 'rails', '~> 5.0.2'
 gem 'rubocop', require: false
+gem 'sidekiq'
 
 group :development, :test do
   gem 'byebug', platform: :mri

@@ -2,12 +2,13 @@
 require 'rails_helper'
 
 RSpec.describe Page, type: :model do
-  let(:page) do
-    Page.build url: 'test.com'
-  end
   describe 'validations' do
     it 'should validate presence of URL' do
       should validate_presence_of(:url)
+    end
+
+    it 'should validate inclusion of content_status' do
+      should validate_inclusion_of(:content_status).in_array(Page::CONTENT_STATUSES)
     end
   end
 
