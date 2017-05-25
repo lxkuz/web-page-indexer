@@ -22,9 +22,9 @@
 
 * `GET '/'` - list pages, params: page (pagination by last 10 created pages, the first page renders by default)
 
-* `GET '/swagger_editor'` - open swagger editor with swagger.yml config
+* `GET '/swagger_editor'` - open swagger editor with swagger.yml config [Link](https://web-page-indexer.herokuapp.com/swagger_editor)
 
-* `GET '/swagger'` - open swagger UI with swagger.yml config
+* `GET '/swagger'` - open swagger UI with swagger.yml config [Swagger UI](https://web-page-indexer.herokuapp.com/swagger)
 
 ### Technologies
 * `Rails 5`, `Ruby 2.4.0`

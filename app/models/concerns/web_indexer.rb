@@ -44,9 +44,9 @@ module WebIndexer
           res[tag_name] = doc.xpath("//#{tag_name}").map(&:content)
         end
         self.content = res
-        self.content_status = CONTENT_LOADING
-      rescue => e
         self.content_status = CONTENT_READY
+      rescue => e
+        self.content_status = CONTENT_ERROR
         self.content = { error: e.to_s }
       end
       save
