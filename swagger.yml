@@ -3,9 +3,9 @@ info:
   title: Web page indexer API
   description: Web page indexer API
   version: "3.0.0"
-host: localhost:3000
+host: "web-page-indexer.herokuapp.com"
 schemes:
-  - http
+  - https
 produces:
   - application/json
 paths:
