@@ -3,7 +3,7 @@ info:
   title: Web page indexer API
   description: Web page indexer API
   version: "3.0.0"
-host: "web-page-indexer.herokuapp.com"
+host: web-page-indexer.herokuapp.com
 schemes:
   - https
 produces:
