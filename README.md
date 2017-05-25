@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+API endpoints:
 
-Things you may want to cover:
+* POST '/' - create new page
 
-* Ruby version
+* GET '/' - list pages
 
-* System dependencies
+* GET '/swagger_editor' - open swagger editor with swagger.yml config
 
-* Configuration
+* GET '/swagger' - open swagger UI with swagger.yml config
 
-* Database creation
+### Technologies
+* Rubocop with pre-commit hook used
+* swagger.yml for API reference and testing
+* Rspec testing engine with models, controllers and integration tests
+* SimpleCov to calculate tests coverage, current tests coverage is 100.0% covered at 1.79 hits/line
+* Nokogiri to search HTML tags
+* Sidekiq with Redis for background indexing job
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Deploy
+* Project already have deployed on Heroku (with PostgreSQL and Redis addons)
+* Connected with my Github account, so it will be updated for each push to master branch
