@@ -7,6 +7,8 @@ git_source(:github) do |repo_name|
 end
 gem 'active_model_serializers'
 gem 'faraday'
+gem 'has_scope'
+gem 'kaminari'
 gem 'nokogiri'
 gem 'overcommit'
 gem 'pg'

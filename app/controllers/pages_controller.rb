@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 class PagesController < ApplicationController
+  has_scope :page, default: 1
+
   def create
     record = Page.new resource_params
     if record.save
@@ -10,7 +12,7 @@ class PagesController < ApplicationController
   end
 
   def index
-    render json: Page.all
+    render json: apply_scopes(Page.order(created_at: :desc)).all
   end
 
   private

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 class Page < ApplicationRecord
   validates :url, presence: true
+  paginates_per 10
 
   include WebIndexer
 

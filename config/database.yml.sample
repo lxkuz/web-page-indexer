@@ -1,0 +1,17 @@
+common: &common
+  adapter: postgresql
+  encoding: unicode
+  min_messages: WARNING
+  pool: 5
+
+development:
+  <<: *common
+  database: web_page_indexer_development
+
+production:
+  <<: *common
+  database: web_page_indexer_production
+  
+test:
+  <<: *common
+  database: web_page_indexer_test

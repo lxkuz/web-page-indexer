@@ -6,7 +6,7 @@ module WebIndexer
   extend ActiveSupport::Concern
 
   included do
-    after_commit :schedule_fetching
+    after_commit :schedule_fetching, on: :create
     cattr_accessor :__watch_tags
 
     WATCH_TAGS = [:h1, :h2, :h3, :a].freeze
