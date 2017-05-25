@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class PagesController < ApplicationController
   def create
     record = Page.new resource_params
@@ -10,7 +11,7 @@ class PagesController < ApplicationController
 
   def index
     render json: Page.all
-  end  
+  end
 
   private
 

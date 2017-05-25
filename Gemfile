@@ -1,21 +1,22 @@
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails', '~> 5.0.2'
+gem 'active_model_serializers'
+gem 'faraday'
+gem 'nokogiri'
 gem 'pg'
 gem 'puma', '~> 3.0'
-gem 'active_model_serializers'
-gem 'nokogiri'
-gem 'faraday'
+gem 'rails', '~> 5.0.2'
+gem 'rubocop', require: false
 
 group :development, :test do
   gem 'byebug', platform: :mri
-  gem 'rspec-rails', '~> 3.5'
   gem 'rails-controller-testing'
+  gem 'rspec-rails', '~> 3.5'
 end
 
 group :development do

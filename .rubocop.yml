@@ -1,0 +1,44 @@
+Style/FileName:
+  Exclude:
+    - 'Gemfile'
+
+AllCops:
+  TargetRubyVersion: 2.4
+  Include:
+    - Rakefile
+    - config.ru
+    - lib/**/*.rake
+  Exclude:
+    - db/schema.rb
+    # Offense count: 95
+
+Style/Documentation:
+  Enabled: false
+
+# Offense count: 13
+Metrics/AbcSize:
+  Max: 59
+
+# Offense count: 2
+# Configuration parameters: CountComments, ExcludedMethods.
+Metrics/BlockLength:
+  Max: 42
+
+# Offense count: 2
+Metrics/CyclomaticComplexity:
+  Max: 11
+
+# Offense count: 88
+# Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
+# URISchemes: http, https
+Metrics/LineLength:
+  Max: 120
+
+# Offense count: 15
+# Configuration parameters: CountComments.
+Metrics/MethodLength:
+  Max: 55
+
+# Offense count: 3
+Metrics/PerceivedComplexity:
+  Max: 12
