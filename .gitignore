@@ -25,3 +25,5 @@
 
 # SimpleCov
 coverage
+
+.env

@@ -1,6 +1,6 @@
 # README
 
-### Install
+### Installation
 
 ```bash
   rvm install 2.4.1 #if necessary
@@ -15,6 +15,15 @@
   rake db:migrate
   rails s
 ```  
+
+### Installation via Docker
+
+```bash
+  docker-compose build
+  docker-compose up -d db
+  docker-compose run web rake db:create db:migrate
+  docker-compose up web
+```
 
 ### API endpoints
 
@@ -40,3 +49,13 @@
 
 * Project already have deployed on `Heroku` (with `PostgreSQL` and `Redis` addons) [Swagger UI](https://web-page-indexer.herokuapp.com/swagger)
 * Connected with my Github account, so it will be updated for each push to master branch
+
+### Tests
+
+```
+  bundle exec rspec spec
+```
+or in case of using Docker:
+```
+  docker-compose run web rspec spec
+```
